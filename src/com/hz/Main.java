@@ -5,11 +5,13 @@ import java.io.IOException;
 
 public class Main {
 
-    public static void main(String[] args) {
-	// write your code here
 
+    public static void main(String[] args) {
+        // write your code here
+        BooleanAdapter booleanAdapter = new BooleanAdapter();
         ConsoleReader reader = new ConsoleReader();
         ConsoleWriter writer = new ConsoleWriter();
+
 
         // ask questions
         String q1 = "Do you like eating vegetables?";
@@ -21,7 +23,9 @@ public class Main {
         writer.write(q1);
 
         // read response
-        Boolean ans1 = reader.readLine().equals("Yep");
+        Boolean test1 = booleanAdapter.ConvertTextToBoolean(reader.readLine());
+        Boolean ans1 = test1.equals(true);
+//booleanAdapter.ConvertTextToBoolean(reader.readLine());
 
         //TODO
         // the reader should accept the following values as true:
